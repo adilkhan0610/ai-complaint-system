@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧠 AI Complaint Management System
 
-## Getting Started
+A full-stack web application that allows users to raise, track, and manage complaints efficiently.  
+The system provides a centralized dashboard for users and administrators, enabling structured complaint handling with categories, priorities, and status updates.
 
-First, run the development server:
+🚀 **Live Demo:** https://ai-complaint-system-beta.vercel.app/
+📦 **Deployed on:** Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Project Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The **AI Complaint Management System** is designed to solve real-world issues where complaints raised by users are often unorganized, delayed, or ignored.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project provides:
+- A user-friendly interface to raise complaints
+- A dashboard to view complaint status
+- An admin panel to manage and resolve complaints
+- A scalable backend using Supabase
+- A modern frontend using Next.js
 
-## Learn More
+The goal is to simulate a **real-world complaint resolution workflow** used in organizations, societies, or service platforms.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- **Next.js (App Router)**
+- **React**
+- **Tailwind CSS**
+- **JavaScript**
 
-## Deploy on Vercel
+### Backend / Database
+- **Supabase**
+  - PostgreSQL Database
+  - Authentication (Email-based)
+  - Storage (for future image uploads)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deployment
+- **Vercel**
+- Environment-based configuration using `.env` variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ✨ Key Features
+
+### 👤 User Features
+- User signup and login
+- Raise a complaint with:
+  - Title
+  - Description
+  - Category
+  - Priority
+- View all raised complaints on dashboard
+- Track complaint status (Open / In Progress / Resolved)
+
+### 🛡️ Admin Features
+- Admin dashboard to view all complaints
+- View complete complaint details
+- Update complaint status
+- Centralized complaint monitoring
+
+### ⚙️ System Features
+- Clean and responsive UI
+- Real-time database updates
+- Stable architecture (no random empty states)
+- Secure environment variables
+
+---
+
+## 📂 Project Structure
+ai-complaint-system/
+│
+├── src/
+│ ├── app/
+│ │ ├── dashboard/ # User dashboard
+│ │ ├── complaints/
+│ │ │ └── new/ # Raise complaint page
+│ │ ├── login/ # Login page
+│ │ ├── signup/ # Signup page
+│ │ ├── admin/ # Admin dashboard
+│ │ ├── layout.js # App layout
+│ │ └── page.js # Landing page
+│ │
+│ ├── lib/
+│ │ └── supabaseClient.js # Supabase configuration
+│ │
+│ └── components/ # Reusable UI components
+│
+├── public/
+├── package.json
+├── README.md
+└── .env.local
+
+
+---
+
+## 🧪 How the Application Works
+
+### User Flow
+1. User signs up or logs in
+2. User raises a complaint by filling a form
+3. Complaint is stored in Supabase database
+4. User dashboard displays all complaints
+5. Complaint status is updated by admin
+
+### Admin Flow
+1. Admin logs in
+2. Admin views all complaints
+3. Admin updates status (Open / In Progress / Resolved)
+4. Changes reflect immediately on dashboards
+
+---
+
+## 🔮 Future Improvements
+
+- Role-based access using Supabase RLS
+- File/image upload support
+- Advanced analytics dashboard
+- Email notifications
+- AI-based complaint categorization
+- Better UI animations and transitions
+
+---
+
+## 👨‍💻 Author
+
+**Adil Hamid Khan**  
+Third Year Computer Engineering Student  
+Passionate about Full-Stack Development
+
+
+
+
